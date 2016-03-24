@@ -1,0 +1,39 @@
+﻿
+<div class="row  text-center">
+
+    <div class="container-fluid">
+        <ul class="nav nav-tabs">
+            <li><a href="#/description/{{menu.truck.id}}">Description</a></li>
+            <li class="active"><a href="#/menu/{{menu.truck.id}}">Menu</a></li>
+            <li><a href="#/reviews/{{menu.truck.id}}">Reviews</a></li>
+            <li class="pull-right"><a href="#/shoppingcart">Place Order &nbsp;<span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+        </ul>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row" ng-repeat="m in menu.truck.menuItems">
+                    <div class="col-md-3" style="text-align:center">
+                        <img ng-src="{{m.imageUrl}}" class="img-circle" display="center" />
+                    </div>
+                    <div class="col-md-3" style="text-align:center">
+                        <h2>{{m.name}}</h2><br>
+                        <p>{{m.description}}</p>
+                    </div>
+                    <div class="col-md-3" style="text-align:center">
+                        <br />
+                        <h3>{{m.price | currency}}</h3>
+                    </div>
+                    <div class="col-md-3" style="text-align:center">
+                        <h2>Add to cart</h2><br>
+                        <div ng-click="menu.addToCart(m.id)" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

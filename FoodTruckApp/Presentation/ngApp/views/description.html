@@ -1,0 +1,21 @@
+﻿<div class="row  text-center">
+
+    <div class="container-fluid">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#/description/{{ftc.foodTruck.id}}">Description</a></li>
+            <li><a href="#/menu/{{ftc.foodTruck.id}}">Menu</a></li>
+            <li><a href="#/reviews/{{ftc.foodTruck.id}}">Reviews</a></li>
+        </ul>
+    </div>
+
+    <div class="container marketing">
+        <div class="featurette">
+            <img class="featurette-image img-circle pull-left" ng-src="{{ftc.foodTruck.image}}">
+            <h2 class="featurette-heading text-center">{{ftc.foodTruck.name}}</h2>
+            <div class="star-ratings-sprite"><span style="width:calc({{ftc.foodTruck.rating}}/5*100%)" class="rating"></span></div>
+            <br>
+            <p class="lead text-right">{{ftc.foodTruck.description}}</p>
+        </div>
+    </div>
+
+</div>
